@@ -57,61 +57,41 @@ object ChurnPredictionSVM {
 
     val cvModel = crossval.fit(Preprocessing.trainDF)
 
-    val predictions = cvModel.transform(Preprocessing.testSet)
-    val selectPrediction = predictions.select("label", "features", "rawPrediction", "prediction")
-    selectPrediction.show(10)
+    val predDF = cvModel.transform(Preprocessing.testSet)
+    val result = predDF.select("label", "prediction", "probability")
+    val resutDF = result.withColumnRenamed("prediction", "Predicted_label")
+    resutDF.show(10)
 
-    val accuracy = evaluator.evaluate(predictions)
+    val accuracy = evaluator.evaluate(predDF)
     println("Classification accuracy: " + accuracy)
 
     // Compute other performence metrices
-    val predictionAndLabels = predictions
+    val predictionAndLabels = predDF
       .select("prediction", "label")
       .rdd.map(x => (x(0).asInstanceOf[Double], x(1)
         .asInstanceOf[Double]))
 
     val metrics = new BinaryClassificationMetrics(predictionAndLabels)
-
     val areaUnderPR = metrics.areaUnderPR
     println("Area under the precision-recall curve: " + areaUnderPR)
 
     val areaUnderROC = metrics.areaUnderROC
     println("Area under the receiver operating characteristic (ROC) curve: " + areaUnderROC)
 
-    /*
-    val precesion = metrics.precisionByThreshold()
-    println("Precision: "+ precesion.foreach(print))
-    
-    val recall = metrics.recallByThreshold()
-    println("Recall: "+ recall.foreach(print))
-    
-    val f1Measure = metrics.fMeasureByThreshold()
-    println("F1 measure: "+ f1Measure.foreach(print))
-    * 
-    */
+    val tVSpDF = predDF.select("label", "prediction") // True vs predicted labels
+    val TC = predDF.count() //Total count
 
-    val lp = predictions.select("label", "prediction")
-    val counttotal = predictions.count()
-    val correct = lp.filter($"label" === $"prediction").count()
-    val wrong = lp.filter(not($"label" === $"prediction")).count()
-    val ratioWrong = wrong.toDouble / counttotal.toDouble
-    val ratioCorrect = correct.toDouble / counttotal.toDouble
-    val tp = lp.filter($"prediction" === 0.0).filter($"label" === $"prediction").count() / counttotal.toDouble
-    val tn = lp.filter($"prediction" === 1.0).filter($"label" === $"prediction").count() / counttotal.toDouble
-    val fp = lp.filter($"prediction" === 1.0).filter(not($"label" === $"prediction")).count() / counttotal.toDouble
-    val fn = lp.filter($"prediction" === 0.0).filter(not($"label" === $"prediction")).count() / counttotal.toDouble
+    val tp = tVSpDF.filter($"prediction" === 0.0).filter($"label" === $"prediction").count() / TC.toDouble
+    val tn = tVSpDF.filter($"prediction" === 1.0).filter($"label" === $"prediction").count() / TC.toDouble
+    val fp = tVSpDF.filter($"prediction" === 1.0).filter(not($"label" === $"prediction")).count() / TC.toDouble
+    val fn = tVSpDF.filter($"prediction" === 0.0).filter(not($"label" === $"prediction")).count() / TC.toDouble
     
-    val MCC = (tp * tn - fp * fn) / math.sqrt((tp + fp) * (tp + fn) * (fp + tn) * (tn + fn))
+    val MCC = (tp * tn - fp * fn) / math.sqrt((tp + fp) * (tp + fn) * (fp + tn) * (tn + fn)) // Calculating Matthews correlation coefficient
 
-    println("Total Count: " + counttotal)
-    println("Correct: " + correct)
-    println("Wrong: " + wrong)
-    println("Ratio wrong: " + ratioWrong)
-    println("Ratio correct: " + ratioCorrect)
-    println("Ratio true positive: " + tp)
-    println("Ratio false positive: " + fp)
-    println("Ratio true negative: " + tn)
-    println("Ratio false negative: " + fn)
+    println("True positive rate: " + tp *100 + "%")
+    println("False positive rate: " + fp * 100 + "%")
+    println("True negative rate: " + tn * 100 + "%")
+    println("False negative rate: " + fn * 100 + "%")
     println("Matthews correlation coefficient: " + MCC)
   }
 }
