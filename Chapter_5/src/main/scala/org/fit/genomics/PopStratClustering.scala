@@ -171,8 +171,8 @@ object PopStratClusterings {
       val model = kmeans.fit(pcaDF)
 
       // Evaluate clustering by computing Within Set Sum of Squared Errors.
-      val WSSSE = model.computeCost(pcaDF)
-      println("Within Set Sum of Squared Errors for k = " + i + " is " + WSSSE)
+      val WCSS = model.computeCost(pcaDF)
+      println("Within Set Sum of Squared Errors for k = " + i + " is " + WCSS)
     }
     /*
 		Within Set Sum of Squared Errors for k = 2 is 135.0048361804504
