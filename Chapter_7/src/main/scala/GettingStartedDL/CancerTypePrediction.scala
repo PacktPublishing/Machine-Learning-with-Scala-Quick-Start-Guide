@@ -115,7 +115,6 @@ object CancerTypePrediction {
     for (i <- 0 to layers.length-1) {
       val nParams = layers(i).numParams()
       println("Number of parameters in layer " + i + ": " + nParams)
-      print(nParams)
       totalNumParams = totalNumParams + nParams
     }
 
