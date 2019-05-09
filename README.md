@@ -50,19 +50,15 @@ Click on the following link to see the Code in Action:
 
 [http://bit.ly/2WhQf2i](http://bit.ly/2WhQf2i)
 
-### Related products <Other books you may enjoy>
-* Linux: Powerful Server Administration [[Packt]](https://www.packtpub.com/networking-and-servers/linux-powerful-server-administration?utm_source=github&utm_medium=repository&utm_campaign=9781788293778) [[Amazon]](https://www.amazon.com/dp/1788293770)
+### Related products
+* Scala Machine Learning Projects [[Packt]](https://prod.packtpub.com/in/big-data-and-business-intelligence/scala-machine-learning-projects?utm_source=github&utm_medium=repository&utm_campaign=9781788479042) [[Amazon]](https://www.amazon.com/dp/1788479041)
 
-* Linux Device Drivers Development [[Packt]](https://www.packtpub.com/networking-and-servers/linux-device-drivers-development?utm_source=github&utm_medium=repository&utm_campaign=9781785280009) [[Amazon]](https://www.amazon.com/dp/1788293770)
+* Scala and Spark for Big Data Analytics [[Packt]](https://prod.packtpub.com/in/big-data-and-business-intelligence/scala-and-spark-big-data-analytics?utm_source=github&utm_medium=repository&utm_campaign=9781785280849) [[Amazon]](https://www.amazon.com/dp/1785280848)
 
 ## Get to Know the Author
 **Md. Rezaul Karim**
 Md. Rezaul Karim is a researcher, author, and data science enthusiast with a strong computer science background, plus 10 years of R&D experience in machine learning, deep learning, and data mining algorithms to solve emerging bioinformatics research problems by making them explainable. He is passionate about applied machine learning, knowledge graphs, and explainable artificial intelligence (XAI).
 Currently, he is working as a research scientist at Fraunhofer FIT, Germany. He is also a Ph.D. candidate at RWTH Aachen University, Germany. Before joining FIT, he worked as a researcher at the Insight Centre for Data Analytics, Ireland. Previously, he worked as a lead software engineer at Samsung Electronics, Korea.
-
-## Other books by the author
-* [Mastering Linux Network Administration](https://www.packtpub.com/networking-and-servers/mastering-linux-network-administration?utm_source=github&utm_medium=repository&utm_campaign=9781784399597)
-* [Linux Mint Essentials](https://www.packtpub.com/networking-and-servers/linux-mint-essentials?utm_source=github&utm_medium=repository&utm_campaign=9781782168157)
 
 ### Suggestions and Feedback
 [Click here](https://docs.google.com/forms/d/e/1FAIpQLSdy7dATC6QmEL81FIUuymZ0Wy9vH1jHkvpY57OiMeKGqib_Ow/viewform) if you have any feedback or suggestions.
