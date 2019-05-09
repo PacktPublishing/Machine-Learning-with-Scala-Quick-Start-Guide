@@ -39,7 +39,7 @@ With the following software and hardware list you can run all code files present
 
 | Chapter  | Software required                   | OS required                        |
 | -------- | ------------------------------------| -----------------------------------|
-| 1-3,6    | Spark: 2.3.0 (or higher), Hadoop: 2.7 (or higher), Java (JDK and JRE): 1.8+, Scala: 2.11.x (or higher), Eclipse Mars/Luna: latest, Maven Eclipse plugin: 2.9 or higher, Maven compiler plugin for Eclipse: 2.3.2 or higher, Maven assembly plugin for Eclipse: 2.4.1 or higher, Importantly, re-use the provided pom.xml file with Packt supplementary and change the version mentioned above and APIs. Then everything will be managed accordingly.| Windows, Mac OS X, and Linux (Any) |
+| 1-3,6    | * Spark: 2.3.0 (or higher), Hadoop: 2.7 (or higher), Java (JDK and JRE): 1.8+, Scala: 2.11.x (or higher), Eclipse Mars/Luna: latest, Maven Eclipse plugin: 2.9 or higher, Maven compiler plugin for Eclipse: 2.3.2 or higher, Maven assembly plugin for Eclipse: 2.4.1 or higher, Importantly, re-use the provided pom.xml file with Packt supplementary and change the version mentioned above and APIs. Then everything will be managed accordingly.| Windows, Mac OS X, and Linux (Any) |
 | 5        | Same as above plus the following: h2o version: 3.22.1.1, sparkling water version: 2.4.1, adam version: 0.23.0            | Windows, Mac OS X, and Linux (Any) |
 | 7        | Same as above PLUS the following:  
 
