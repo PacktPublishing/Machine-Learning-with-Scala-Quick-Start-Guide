@@ -39,7 +39,7 @@ With the following software and hardware list you can run all code files present
 
 | Chapter  | Software required                   | OS required                        |
 | -------- | ------------------------------------| -----------------------------------|
-| 1-3,6    | * Spark: 2.3.0 (or higher)          | Windows, Mac OS X, and Linux (Any) |
+| 1-3,6    | Spark: 2.3.0 (or higher), Hadoop: 2.7 (or higher), Java (JDK and JRE): 1.8+, Scala: 2.11.x (or higher), Eclipse Mars/Luna: latest, Maven Eclipse plugin: 2.9 or higher, Maven compiler plugin for Eclipse: 2.3.2 or higher, Maven assembly plugin for Eclipse: 2.4.1 or higher| Windows, Mac OS X, and Linux (Any) |
 | 5        | Rstudio Desktop 0.99.903            | Windows, Mac OS X, and Linux (Any) |
 | 7        | Rstudio Desktop 0.99.903            | Windows, Mac OS X, and Linux (Any) |
 
