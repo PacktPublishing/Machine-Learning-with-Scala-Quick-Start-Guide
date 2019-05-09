@@ -1,5 +1,5 @@
 # Machine Learning with Scala Quick Start Guide
-<a href="Packt UTM URL of the Book"><img src="Cover Image URL of the Book" alt="Machine Learning with Scala Quick Start Guide" height="256px" align="right"></a>
+<a href="Packt UTM URL of the Book"><img src="https://packt-type-cloud.s3.amazonaws.com/uploads/sites/3234/2019/04/cover.png" alt="Machine Learning with Scala Quick Start Guide" height="256px" align="right"></a>
 
 This is the code repository for [Machine Learning with Scala Quick Start Guide](Packt UTM URL of the Book), published by Packt.
 
