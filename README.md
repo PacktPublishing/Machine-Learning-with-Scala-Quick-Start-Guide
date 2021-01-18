@@ -1,8 +1,3 @@
-## $5 Tech Unlocked 2021!
-[Buy and download this Book for only $5 on PacktPub.com](https://www.packtpub.com/product/machine-learning-with-scala-quick-start-guide/9781789345070)
------
-*If you have read this book, please leave a review on [Amazon.com](https://www.amazon.com/gp/product/1789345073).     Potential readers can then use your unbiased opinion to help them make purchase decisions. Thank you. The $5 campaign         runs from __December 15th 2020__ to __January 13th 2021.__*
-
 # Machine Learning with Scala Quick Start Guide
 <a href="https://www.packtpub.com/big-data-and-business-intelligence/machine-learning-scala-quick-start-guide"><img src="https://packt-type-cloud.s3.amazonaws.com/uploads/sites/3234/2019/04/cover.png" alt="Machine Learning with Scala Quick Start Guide" height="256px" align="right"></a>
 
